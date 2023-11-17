@@ -1,15 +1,21 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - Entry point
+ * main - entry point
  *
- * Description: A beautiful code that passes betty checks
- *
- * Return: Always 0 (Success)
+ * Return: Always 0
  */
+
 int main(void)
 {
-	printf("Hello, Josiah!\n");
+	char operation[120];
+
+	while (true)
+	{
+		shell_prompt();
+		read_operation(operation, sizeof(operation));
+		execute_operation(operation);
+	}
 	return (0);
 }
 
